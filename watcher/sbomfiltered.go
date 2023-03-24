@@ -62,7 +62,7 @@ func (h *SBOMFilteredHandler) HandleAddedEvent(event watch.Event) (*apis.Command
 
 	wlid := pkgwlid.GetWLID(clusterName, namespace, kind, name)
 
-	return getCVEScanCommand(wlid, map[string]string{}), nil
+	return getImageScanCommand(wlid, map[string]string{}), nil
 }
 
 // HandleEvents continuously handles events about Filtered SBOMs
